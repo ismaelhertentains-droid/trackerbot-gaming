@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrackerBot Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Monitorización en tiempo real</p>
+        <h1>TrackerBot Gaming</h1>
+        <p class="hero-text">
+          Vigila precios de videojuegos en Instant Gaming y recibe alertas instantáneas por Telegram.
+        </p>
+
+        <div class="hero-actions">
+          <button id="start" class="primary-btn">Iniciar Monitorización</button>
+          <button id="stop" class="ghost-btn">Detener</button>
+          <button id="check-now" class="secondary-btn">Comprobar ahora</button>
+          <button id="simulate-alert" class="ghost-btn">Simular alerta</button>
+          <button id="download-snapshot" class="ghost-btn">Descargar instantánea</button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="stat-card">
+          <span class="stat-label">Estado del sistema</span>
+          <h2 id="status-text">En espera</h2>
+          <p>El sistema está listo para comenzar la monitorización.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-panel">
+      <div class="panel">
+        <h3 class="panel-title">Configuración de Telegram</h3>
+        <p class="panel-description">
+          Introduce tu Bot Token y Chat ID para recibir alertas en tu móvil.
+        </p>
+
+        <div class="field-row">
+          <label>Bot Token</label>
+          <input id="bot-token" placeholder="123456:ABC-DEF1234">
+        </div>
+
+        <div class="field-row">
+          <label>Chat ID</label>
+          <input id="chat-id" placeholder="123456789">
+        </div>
+
+        <button id="save-telegram" class="primary-btn">Guardar configuración</button>
+        <button id="test-telegram" class="secondary-btn">Probar Telegram</button>
+      </div>
+
+      <div class="panel panel--info">
+        <h3 class="panel-title">Información</h3>
+        <ul class="info-list">
+          <li>• Las alertas se envían solo si Telegram está configurado.</li>
+          <li>• Puedes simular una alerta sin depender del scraping.</li>
+          <li>• El sistema guarda historial en localStorage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+
+      <div class="game-card" id="card-fifa">
+        <div class="game-card__header">
+          <h3>FIFA 26</h3>
+          <p>Monitorización activa</p>
+        </div>
+
+        <div class="game-card__image">
+          <img src="https://via.placeholder.com/600x300?text=FIFA+26">
+        </div>
+
+        <div class="game-card__content">
+          <div class="game-card__status">
+            <span class="tag tag--success">Activo</span>
+            <span class="discount-pill">0%</span>
+          </div>
+
+          <div class="game-card__detail">
+            <div class="detail-row">
+              <strong>Precio actual:</strong>
+              <p class="price-current">--</p>
+            </div>
+
+            <div class="detail-row">
+              <strong>Precio anterior:</strong>
+              <p class="price-old">--</p>
+            </div>
+
+            <a class="game-link" href="#" target="_blank">Ver en Instant Gaming</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card" id="card-gta">
+        <div class="game-card__header">
+          <h3>GTA V</h3>
+          <p>Monitorización activa</p>
+        </div>
+
+        <div class="game-card__image">
+          <img src="https://via.placeholder.com/600x300?text=GTA+V">
+        </div>
+
+        <div class="game-card__content">
+          <div class="game-card__status">
+            <span class="tag tag--success">Activo</span>
+            <span class="discount-pill">0%</span>
+          </div>
+
+          <div class="game-card__detail">
+            <div class="detail-row">
+              <strong>Precio actual:</strong>
+              <p class="price-current">--</p>
+            </div>
+
+            <div class="detail-row">
+              <strong>Precio anterior:</strong>
+              <p class="price-old">--</p>
+            </div>
+
+            <a class="game-link" href="#" target="_blank">Ver en Instant Gaming</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card" id="card-cod">
+        <div class="game-card__header">
+          <h3>Call of Duty: Black Ops</h3>
+          <p>Monitorización activa</p>
+        </div>
+
+        <div class="game-card__image">
+          <img src="https://via.placeholder.com/600x300?text=Call+of+Duty">
+        </div>
+
+        <div class="game-card__content">
+          <div class="game-card__status">
+            <span class="tag tag--success">Activo</span>
+            <span class="discount-pill">0%</span>
+          </div>
+
+          <div class="game-card__detail">
+            <div class="detail-row">
+              <strong>Precio actual:</strong>
+              <p class="price-current">--</p>
+            </div>
+
+            <div class="detail-row">
+              <strong>Precio anterior:</strong>
+              <p class="price-old">--</p>
+            </div>
+
+            <a class="game-link" href="#" target="_blank">Ver en Instant Gaming</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="log-panel">
+      <h3 class="panel-title">Historial</h3>
+      <div class="log-list" id="log-list"></div>
+    </section>
+
+    <footer class="footer">
+      TrackerBot Gaming © 2026 — Luis
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
